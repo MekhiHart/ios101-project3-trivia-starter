@@ -52,13 +52,23 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h05-6M-rSC">
+                                <rect key="frame" x="30" y="177.33333333333337" width="333" height="261"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="261" id="Bzb-4Q-zSN"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="NhX-Ps-h4l"/>
                         <color key="backgroundColor" systemColor="systemCyanColor"/>
                         <constraints>
+                            <constraint firstItem="h05-6M-rSC" firstAttribute="leading" secondItem="NhX-Ps-h4l" secondAttribute="leading" constant="30" id="D7w-5b-nXF"/>
+                            <constraint firstItem="NhX-Ps-h4l" firstAttribute="trailing" secondItem="h05-6M-rSC" secondAttribute="trailing" constant="30" id="YFK-4d-ONb"/>
                             <constraint firstItem="f53-Pj-POp" firstAttribute="top" secondItem="NhX-Ps-h4l" secondAttribute="top" constant="25" id="aKA-y4-hn2"/>
                             <constraint firstItem="5Fd-Jo-2JN" firstAttribute="centerX" secondItem="Yf7-Fj-Fxn" secondAttribute="centerX" id="apy-fl-OQB"/>
                             <constraint firstItem="5Fd-Jo-2JN" firstAttribute="top" secondItem="f53-Pj-POp" secondAttribute="bottom" constant="18" id="tZF-la-msh"/>
+                            <constraint firstItem="h05-6M-rSC" firstAttribute="top" secondItem="5Fd-Jo-2JN" secondAttribute="bottom" constant="25" id="w2w-5Q-S47"/>
                             <constraint firstItem="f53-Pj-POp" firstAttribute="centerX" secondItem="Yf7-Fj-Fxn" secondAttribute="centerX" id="wEb-VO-jvA"/>
                         </constraints>
                     </view>
@@ -69,6 +79,9 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemCyanColor">
             <color red="0.19607843137254902" green="0.67843137254901964" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
