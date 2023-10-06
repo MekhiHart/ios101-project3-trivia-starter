@@ -55,23 +55,20 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h05-6M-rSC">
                                 <rect key="frame" x="30" y="177.33333333333337" width="333" height="261"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label Label Label Label Label Label Label Labe" textAlignment="center" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MMJ-aI-VQm">
-                                        <rect key="frame" x="31" y="100.66666666666666" width="270.66666666666669" height="60"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label Label Label Label Label Label Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ipo-5g-5cI">
+                                        <rect key="frame" x="20" y="20" width="293" height="221"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="lineBreak" value="YES"/>
-                                        </userDefinedRuntimeAttributes>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="MMJ-aI-VQm" secondAttribute="trailing" constant="31.329999999999998" id="6TS-gX-Dta"/>
                                     <constraint firstAttribute="height" constant="261" id="Bzb-4Q-zSN"/>
-                                    <constraint firstItem="MMJ-aI-VQm" firstAttribute="leading" secondItem="h05-6M-rSC" secondAttribute="leading" constant="31" id="Umy-WZ-2Hj"/>
-                                    <constraint firstItem="MMJ-aI-VQm" firstAttribute="centerY" secondItem="h05-6M-rSC" secondAttribute="centerY" id="WZR-o2-ei9"/>
-                                    <constraint firstItem="MMJ-aI-VQm" firstAttribute="centerX" secondItem="h05-6M-rSC" secondAttribute="centerX" id="kOW-UG-ZGI"/>
+                                    <constraint firstAttribute="bottom" secondItem="ipo-5g-5cI" secondAttribute="bottom" constant="20" id="Zzs-Sk-yJc"/>
+                                    <constraint firstItem="ipo-5g-5cI" firstAttribute="leading" secondItem="h05-6M-rSC" secondAttribute="leading" constant="20" id="bGx-yv-sV6"/>
+                                    <constraint firstItem="ipo-5g-5cI" firstAttribute="top" secondItem="h05-6M-rSC" secondAttribute="top" constant="20" id="hUe-YK-pxM"/>
+                                    <constraint firstAttribute="trailing" secondItem="ipo-5g-5cI" secondAttribute="trailing" constant="20" id="iV6-ys-rsS"/>
                                 </constraints>
                             </view>
                         </subviews>
