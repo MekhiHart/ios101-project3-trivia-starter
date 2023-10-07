@@ -17,14 +17,23 @@ class QuizViewController: UIViewController {
     @IBOutlet weak var questionLabel: UILabel!
     
     
-    private let correctAnswers = 0
-    private let currentQuestionIndex = 0
-    private let questionList = [Question]()
+    private var correctAnswers = 0
+    private var currentQuestionIndex = 0
+    private var questionList = [Question]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        questionList = createQuestions()
+        configureUI()
         // Do any additional setup after loading the view.
+    }
+    
+    public func configureUI() -> Void{
+        categoryLabel.text = questionList[currentQuestionIndex].category
+        currentQuestionLabel.text = String(currentQuestionIndex + 1)
+        totalNumberQuestionLabel.text = String(questionList.count)
+        questionLabel.text = questionList[currentQuestionIndex].question
+        
     }
     
     public func createQuestions() -> [Question]{
