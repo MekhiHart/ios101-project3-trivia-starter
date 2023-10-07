@@ -84,6 +84,12 @@
                             <constraint firstItem="f53-Pj-POp" firstAttribute="centerX" secondItem="Yf7-Fj-Fxn" secondAttribute="centerX" id="wEb-VO-jvA"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="categoryLabel" destination="5Fd-Jo-2JN" id="15M-QZ-chL"/>
+                        <outlet property="currentQuestionLabel" destination="Hjz-jj-13B" id="8xB-8d-fJc"/>
+                        <outlet property="questionLabel" destination="ipo-5g-5cI" id="lnn-It-zul"/>
+                        <outlet property="totalNumberQuestionLabel" destination="ciX-3Y-Jji" id="Cxl-k3-bwv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uTW-Mt-arF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
