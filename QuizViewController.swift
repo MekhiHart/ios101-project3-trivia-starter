@@ -17,9 +17,16 @@ class QuizViewController: UIViewController {
     @IBOutlet weak var questionLabel: UILabel!
     
     
+    // Buttons
+    @IBOutlet weak var button1: UIButton!
+    @IBOutlet weak var button2: UIButton!
+    @IBOutlet weak var button3: UIButton!
+    @IBOutlet weak var button4: UIButton!
+    
     private var correctAnswers = 0
     private var currentQuestionIndex = 0
     private var questionList = [Question]()
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,12 +35,40 @@ class QuizViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func buttonPressed(_ sender: UIButton) {
+        let currQuestion = questionList[currentQuestionIndex]
+        let buttonTag = sender.tag
+        let answerResult = currQuestion.choices[buttonTag].1 // gives result of the answer
+        
+        if answerResult{
+            print("correct answer!")
+            correctAnswers += 1
+        }
+        currentQuestionIndex = min(questionList.count - 1, currentQuestionIndex + 1)
+        configureUI()
+
+        
+//        currentQuestionIndex += 1
+    } // buttonPressed
     public func configureUI() -> Void{
-        categoryLabel.text = questionList[currentQuestionIndex].category
+        let currQuestion = questionList[currentQuestionIndex]
+        categoryLabel.text = currQuestion.category
         currentQuestionLabel.text = String(currentQuestionIndex + 1)
         totalNumberQuestionLabel.text = String(questionList.count)
-        questionLabel.text = questionList[currentQuestionIndex].question
+        questionLabel.text = currQuestion.question
         
+        // buttons
+        button1.setTitle(currQuestion.choices[0].0, for: .highlighted)
+        button1.setTitle(currQuestion.choices[0].0, for: .normal)
+        
+        button2.setTitle(currQuestion.choices[1].0, for: .highlighted)
+        button2.setTitle(currQuestion.choices[1].0, for: .normal)
+        
+        button3.setTitle(currQuestion.choices[2].0, for: .highlighted)
+        button3.setTitle(currQuestion.choices[2].0, for: .normal)
+        
+        button4.setTitle(currQuestion.choices[3].0, for: .highlighted)
+        button4.setTitle(currQuestion.choices[3].0, for: .normal)
     }
     
     public func createQuestions() -> [Question]{
@@ -47,7 +82,7 @@ class QuizViewController: UIViewController {
         ])
         
         let question2 = Question(category: "Music",
-                                 question: "What is music track from mincraft uses a hand pan",
+                                 question: "What is the music track from mincraft which uses a hand pan",
                                  choices: [
                                     ("Subwoofer Lullaby", false),
                                     ("Living Mice", false),

@@ -71,10 +71,60 @@
                                     <constraint firstAttribute="trailing" secondItem="ipo-5g-5cI" secondAttribute="trailing" constant="20" id="iV6-ys-rsS"/>
                                 </constraints>
                             </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="q03-an-srh">
+                                <rect key="frame" x="20" y="473.33333333333331" width="353" height="173.33333333333331"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sb8-e6-XNe">
+                                        <rect key="frame" x="0.0" y="0.0" width="353" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray" title="Button">
+                                            <color key="baseForegroundColor" systemColor="labelColor"/>
+                                            <color key="baseBackgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="buttonPressed:" destination="aZw-le-0EE" eventType="touchUpInside" id="vUq-f7-e4j"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fYN-4q-42r">
+                                        <rect key="frame" x="0.0" y="46.333333333333314" width="353" height="34.333333333333343"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray" title="Button">
+                                            <color key="baseForegroundColor" systemColor="labelColor"/>
+                                            <color key="baseBackgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="buttonPressed:" destination="aZw-le-0EE" eventType="touchUpInside" id="Ls2-cO-JKZ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tbm-ye-LL6">
+                                        <rect key="frame" x="0.0" y="92.666666666666686" width="353" height="34.333333333333343"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray" title="Button">
+                                            <color key="baseForegroundColor" systemColor="labelColor"/>
+                                            <color key="baseBackgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="buttonPressed:" destination="aZw-le-0EE" eventType="touchUpInside" id="eqX-4K-c2i"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xha-PI-UMs">
+                                        <rect key="frame" x="0.0" y="139.00000000000006" width="353" height="34.333333333333343"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray" title="Button">
+                                            <color key="baseForegroundColor" systemColor="labelColor"/>
+                                            <color key="baseBackgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="buttonPressed:" destination="aZw-le-0EE" eventType="touchUpInside" id="SI3-re-c8H"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="NhX-Ps-h4l"/>
                         <color key="backgroundColor" systemColor="systemCyanColor"/>
                         <constraints>
+                            <constraint firstItem="q03-an-srh" firstAttribute="top" secondItem="h05-6M-rSC" secondAttribute="bottom" constant="35" id="0Ps-qJ-WKf"/>
                             <constraint firstItem="h05-6M-rSC" firstAttribute="leading" secondItem="NhX-Ps-h4l" secondAttribute="leading" constant="30" id="D7w-5b-nXF"/>
                             <constraint firstItem="NhX-Ps-h4l" firstAttribute="trailing" secondItem="h05-6M-rSC" secondAttribute="trailing" constant="30" id="YFK-4d-ONb"/>
                             <constraint firstItem="f53-Pj-POp" firstAttribute="top" secondItem="NhX-Ps-h4l" secondAttribute="top" constant="25" id="aKA-y4-hn2"/>
@@ -82,9 +132,15 @@
                             <constraint firstItem="5Fd-Jo-2JN" firstAttribute="top" secondItem="f53-Pj-POp" secondAttribute="bottom" constant="18" id="tZF-la-msh"/>
                             <constraint firstItem="h05-6M-rSC" firstAttribute="top" secondItem="5Fd-Jo-2JN" secondAttribute="bottom" constant="25" id="w2w-5Q-S47"/>
                             <constraint firstItem="f53-Pj-POp" firstAttribute="centerX" secondItem="Yf7-Fj-Fxn" secondAttribute="centerX" id="wEb-VO-jvA"/>
+                            <constraint firstItem="NhX-Ps-h4l" firstAttribute="trailing" secondItem="q03-an-srh" secondAttribute="trailing" constant="20" id="wXv-Tc-Dz5"/>
+                            <constraint firstItem="q03-an-srh" firstAttribute="leading" secondItem="NhX-Ps-h4l" secondAttribute="leading" constant="20" id="y2Z-4l-czn"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="button1" destination="Sb8-e6-XNe" id="7CD-Pq-hYv"/>
+                        <outlet property="button2" destination="fYN-4q-42r" id="GC0-7r-fmX"/>
+                        <outlet property="button3" destination="Tbm-ye-LL6" id="iCG-do-BcA"/>
+                        <outlet property="button4" destination="xha-PI-UMs" id="sof-MS-OAr"/>
                         <outlet property="categoryLabel" destination="5Fd-Jo-2JN" id="15M-QZ-chL"/>
                         <outlet property="currentQuestionLabel" destination="Hjz-jj-13B" id="8xB-8d-fJc"/>
                         <outlet property="questionLabel" destination="ipo-5g-5cI" id="lnn-It-zul"/>
@@ -97,6 +153,12 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
