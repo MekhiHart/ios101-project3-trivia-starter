@@ -30,11 +30,11 @@ The following **additional** features are implemented:
 
 Here is a reminder on how to embed Loom videos on GitHub. Feel free to remove this reminder once you upload your README. 
 
-[Guide]](https://www.youtube.com/watch?v=GA92eKlYio4) .
+https://youtu.be/TdHLv3c6CxU
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+Tried to dynamically create buttons based on the number of choices for a question. Was not able to figure that out.
 
 ## License
 
